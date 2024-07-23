@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Хайкю!!</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Логотип">
+    </header>
+    <div id="left">
+        <br><br>
+        <ul>
+            <li onclick="toggleSubcategories('subcategories')">
+                Главная
+                <ul id="subcategories">
+                    <li>сюжет</li>
+                    <li onclick="openPage('Page10.html')">обратная связь</li>
+                </ul>
+            </li>
+            <li onclick="toggleSubcategories('subcategories2')">
+                Команды
+                <ul id="subcategories2">
+                    <li onclick="openPage('Page2.html')">Карасуно</li>
+                    <li onclick="openPage('Page3.html')">Некома</li>
+                    <li onclick="openPage('Page4.html')">Шираторизава</li>
+                    <li onclick="openPage('Page5.html')">Аободжосай</li>
+                    <li onclick="openPage('Page6.html')">Инаризаки</li>
+                    <li onclick="openPage('Page7.html')">Фукурадони</li>
+                    <li onclick="openPage('Page8.html')">Датэко</li>
+                    <li onclick="openPage('Page9.html')">Итачияма</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div id="content">
+        <img src="Haiky.jpg" align="right" alt="Haikyuu">
+        <div>
+            <text>
+                &emsp;Хайкю!! это японская серия манги, написанная и проиллюстрированная Харуичи Фурудате. Он публиковался в журнале манги "Shōnenманга" Weekly ShōNen Jump с февраля 2012 по июль 2020 года, а его главы собраны в 45 томах "танкобона". История рассказывает о Шойо Хинате, мальчике, решившем стать великим волейболистом, несмотря на свой маленький рост.
+                <p>&emsp;Адаптация аниме телесериала производства Production I.G, транслировалась на MBS с апреля по сентябрь 2014 года в 25 сериях. Второй сезон транслировался с октября 2015 по март 2016 года и состоял из 25 серий. Третий сезон транслировался с октября по декабрь 2016 года и состоял из 10 серий. Четвертый сезон был выпущен двумя разделенными курсами с января по декабрь 2020 года, по 25 серий. Аниме-сериал под названием Хайкю!! Финал будет выпущен в двух частях, которые послужат финалом сериала; первая была выпущена в феврале 2024 года.</p>
+                <p>&emsp;В Северной Америке манга была лицензирована Viz Media, в то время как аниме-сериал был лицензирован для цифрового и домашнего выпуска Sentai Filmworks.</p>
+                <p>&emsp;И манга, и аниме получили положительные отклики. В 2016 году Хайкю !! выиграл 61-ю премию Сегакукан за мангу в категории сенэн. К сентябрю 2023 года тираж манги превысил 60 миллионов экземпляров, что сделало ее одной из самых продаваемых серий манги всех времен.</p>
+            </text>
+        </div>
+    </div>
+    <div id="footer">
+        &emsp;
+        <p align="center">
+            наша почта: marjashapetuhova@yandex.ru<br>
+            номер:+79045036279
+        </p>
+    </div>
+    <script>
+        function toggleSubcategories(id) {
+            var subcategories = document.getElementById(id);
+            if (subcategories.style.display === "block") {
+                subcategories.style.display = "none";
+            } else {
+                subcategories.style.display = "block";
+            }
+        }
+
+        function openPage(url) {
+            window.location.href = url;
+        }
+        if ('serviceWorker' in navigator){
+            navigator.serviceWorker.register('/sw.js', {scope:'/'})
+        }
+    </script>
+</body>
+</html>
